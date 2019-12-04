@@ -65,9 +65,6 @@ class RestaurantListViewController: UITableViewController, RestaurantListViewPro
     func initView() {
         /* Init NavigationController  */
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        if let barFont = UIFont(name: "Avenir-Light", size: 36.0) {
-            self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white, NSAttributedStringKey.font:barFont]
-        }
         
         /* Init TableView  */
         self.mRcRefreshControl = UIRefreshControl()
