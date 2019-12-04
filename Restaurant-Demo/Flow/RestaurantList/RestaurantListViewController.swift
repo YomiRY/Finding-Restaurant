@@ -97,10 +97,12 @@ class RestaurantListViewController: UITableViewController, RestaurantListViewPro
         floaty.paddingX = 20
         floaty.paddingY = 20
         floaty.itemTitleColor = UIColor.darkGray
+        // FIXME: LocationPicker for iOS has beed deprecated and closed QQ
         // Locate user's location
-        floaty.addItem(icon:  #imageLiteral(resourceName: "location_icon")) { (floatItem) in
-            self.mPresenter?.onLocationFloatItemClick()
-        }
+//        floaty.addItem(icon:  #imageLiteral(resourceName: "location_icon")) { (floatItem) in
+//            self.mPresenter?.onLocationFloatItemClick()
+//        }
+        // filter
         floaty.addItem(icon:  #imageLiteral(resourceName: "filter")) { (floatItem) in
             self.mPresenter?.onFilterFloatItemClick()
         }

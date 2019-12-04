@@ -31,8 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.sharedSDK().debug = true
 
         /* Init google map api configs */
-        GMSPlacesClient.provideAPIKey("AIzaSyAc5wnmJJydGYodnmlc2jFPQMeAgwLeBug")
-        GMSServices.provideAPIKey("AIzaSyAc5wnmJJydGYodnmlc2jFPQMeAgwLeBug")
+        GMSPlacesClient.provideAPIKey("AIzaSyAfe5kOHB_-GPPNovB8iCDimCBnTsW6OYQ")
+        GMSServices.provideAPIKey("AIzaSyAfe5kOHB_-GPPNovB8iCDimCBnTsW6OYQ")
         
         /* Init YelpApiUtil*/
         YelpApiUtil.initizlize()

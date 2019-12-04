@@ -598,7 +598,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" 9f46a54bfc4906fb913c2da3dbcab6fc91d1b079  7858508ac0fb219b7df99f6226d27930545c5e4d9642d80aa1a4df6d226dfc97";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 9f46a54bfc4906fb913c2da3dbcab6fc91d1b079  7858508ac0fb219b7df99f6226d27930545c5e4d9642d80aa1a4df6d226dfc97\n";
 		};
 		EDC55E0B1FEA0C7300B23097 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -611,7 +611,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:35224406241:ios:ab9ccffc1e877f97\n\n# Replace the /Path/To/ServiceAccount.json with the path to the key you just downloaded\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym \"Restaurant-Demo/ServiceAccount.json\"";
+			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\nGOOGLE_APP_ID=1:35224406241:ios:ab9ccffc1e877f97\n\n# Replace the /Path/To/ServiceAccount.json with the path to the key you just downloaded\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym \"Restaurant-Demo/ServiceAccount.json\"\n";
 		};
 		FA6C838DBFDD085C623B6E4B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
