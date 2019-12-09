@@ -99,9 +99,9 @@ class RestaurantListViewController: UITableViewController, RestaurantListViewPro
         floaty.itemTitleColor = UIColor.darkGray
         // FIXME: LocationPicker for iOS has beed deprecated and closed QQ
         // Locate user's location
-//        floaty.addItem(icon:  #imageLiteral(resourceName: "location_icon")) { (floatItem) in
-//            self.mPresenter?.onLocationFloatItemClick()
-//        }
+        //        floaty.addItem(icon:  #imageLiteral(resourceName: "location_icon")) { (floatItem) in
+        //            self.mPresenter?.onLocationFloatItemClick()
+        //        }
         // filter
         floaty.addItem(icon:  #imageLiteral(resourceName: "filter")) { (floatItem) in
             self.mPresenter?.onFilterFloatItemClick()
@@ -126,7 +126,9 @@ class RestaurantListViewController: UITableViewController, RestaurantListViewPro
         let segueIdentifier = segue.identifier
         
         if segueIdentifier == "press_apply_unwind_segue" {
-            self.mPresenter?.onNewFilterConfigsApply(filterConfigs: self.mFilterConfig)
+            segue.source.dismiss(animated: true) {
+                self.mPresenter?.onNewFilterConfigsApply(filterConfigs: self.mFilterConfig)
+            }
         }
     }
     
@@ -220,7 +222,7 @@ class RestaurantListViewController: UITableViewController, RestaurantListViewPro
         self.mIsFirstDisp = false
         self.mRcRefreshControl?.endRefreshing()
         self.tableView.reloadData()
-
+        
         if self.mShortcutItemAction != nil {
             // TODO:
             // flow from app first launched, it will do refresh list.
