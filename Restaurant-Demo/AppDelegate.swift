@@ -31,8 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.sharedSDK().debug = true
 
         /* Init google map api configs */
-        GMSPlacesClient.provideAPIKey("AIzaSyAc5wnmJJydGYodnmlc2jFPQMeAgwLeBug")
-        GMSServices.provideAPIKey("AIzaSyAc5wnmJJydGYodnmlc2jFPQMeAgwLeBug")
+        GMSPlacesClient.provideAPIKey("AIzaSyAfe5kOHB_-GPPNovB8iCDimCBnTsW6OYQ")
+        GMSServices.provideAPIKey("AIzaSyAfe5kOHB_-GPPNovB8iCDimCBnTsW6OYQ")
         
         /* Init YelpApiUtil*/
         YelpApiUtil.initizlize()
@@ -43,15 +43,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ImageCache.default.maxCachePeriodInSecond = 60 * 60 * 24 * 1
         
         /* Navigation bar style */
-        UINavigationBar.appearance().barTintColor = UIColor(displayP3Red: 216.0/255.0, green: 74.0/255.0, blue: 32.0/255.0, alpha: 1.0)
-        UIToolbar.appearance().barTintColor = UIColor(displayP3Red: 216.0/255.0, green: 74.0/255.0, blue: 32.0/255.0, alpha: 1.0)
-        UINavigationBar.appearance().tintColor = UIColor.white
-        if let barFont = UIFont(name: "Avenir-Light", size: 24.0) {
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = UIColor(displayP3Red: 216.0/255.0, green: 74.0/255.0, blue: 32.0/255.0, alpha: 1.0)
+            UIToolbar.appearance().backgroundColor = UIColor(displayP3Red: 216.0/255.0, green: 74.0/255.0, blue: 32.0/255.0, alpha: 1.0)
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+            UINavigationBar.appearance().tintColor = .white
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().compactAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        } else {
+            UINavigationBar.appearance().barTintColor = UIColor(displayP3Red: 216.0/255.0, green: 74.0/255.0, blue: 32.0/255.0, alpha: 1.0)
+            UIToolbar.appearance().barTintColor = UIColor(displayP3Red: 216.0/255.0, green: 74.0/255.0, blue: 32.0/255.0, alpha: 1.0)
+            UINavigationBar.appearance().tintColor = UIColor.white
+        }
+        if let barFont = UIFont(name: "Avenir-Light", size: 36.0) {
             UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white, NSAttributedStringKey.font:barFont]
         }
         
+        // ShortcutItem
         var isLaunchedFromShortcutItem = false
-        
         if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
             isLaunchedFromShortcutItem = true
             handleShortcutItem(shortcutItem: shortcutItem)

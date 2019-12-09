@@ -29,7 +29,6 @@ class RestaurantInfoTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        print("\(#function), \(self)")
     }
 
 }

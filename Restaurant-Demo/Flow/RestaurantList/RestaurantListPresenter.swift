@@ -23,7 +23,7 @@ class RestaurantListPresenter: NSObject, RestaurantListPresenterProtocol, Locati
     private var mCurLocation:CLLocation?
     private var mSearchKeyword:String?
     private var mIsFirst = true
-    private var mIsNeedReFetch = false
+//    private var mIsNeedReFetch = false
     private var mShortcutItemAction:QuickAction?
     
     // MARK: - LocationStatusDelegate
@@ -59,7 +59,7 @@ class RestaurantListPresenter: NSObject, RestaurantListPresenterProtocol, Locati
         self.mView?.doDismiss(animated: true, completion: nil)
         
         self.mCurLocation = CLLocation(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
-        self.mIsNeedReFetch = true
+//        self.mIsNeedReFetch = true
     }
     
     func placePickerDidCancel(_ viewController: GMSPlacePickerViewController) {
@@ -124,10 +124,11 @@ class RestaurantListPresenter: NSObject, RestaurantListPresenterProtocol, Locati
         if self.mIsFirst {
             self.mIsFirst = false
             initConfig()
-        } else if self.mIsNeedReFetch {
-            self.mIsNeedReFetch = false
-            fetchRestaurantSummaryInfos()
         }
+//        else if self.mIsNeedReFetch {
+//            self.mIsNeedReFetch = false
+//            fetchRestaurantSummaryInfos()
+//        }
     }
     
     func onViewDidDisappear() {}
@@ -146,7 +147,6 @@ class RestaurantListPresenter: NSObject, RestaurantListPresenterProtocol, Locati
     func onSearchKeyworkChange(keyword: String?) {
         self.mSearchKeyword = keyword
         self.mView?.refreshList(restaurantSummaryInfos: self.mModel?.getRestaurantSummaryInfos(keyword: keyword))
-        
     }
     
     func onHandleShortcutItemAction(shortcutItemAction: QuickAction?) {
@@ -205,8 +205,9 @@ class RestaurantListPresenter: NSObject, RestaurantListPresenterProtocol, Locati
     
     func onNewFilterConfigsApply(filterConfigs:FilterConfigs?) {
         self.mModel?.setFilterConfig(filterConfig: filterConfigs)
-        self.mIsNeedReFetch = true
+//      self.mIsNeedReFetch = true
         self.mView?.refreshFilterTagList(filterConfigs: filterConfigs)
+        fetchRestaurantSummaryInfos()
     }
     
     func onRestaurantListItemSelect(summaryInfo:YelpRestaruantSummaryInfo?) {
