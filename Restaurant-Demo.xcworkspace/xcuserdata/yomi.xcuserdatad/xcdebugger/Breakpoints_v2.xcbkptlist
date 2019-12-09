@@ -1,46 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "4DEAB4FB-C8E8-446F-9CF7-12AA0C8F9ABD"
+   uuid = "C325D8F7-E844-4AA3-83B1-43EDF62FC21D"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A87FB158-94D4-456F-9F35-F422F1474747"
+            uuid = "DF5AD8EF-9571-4412-93C6-18081BD010CD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            scope = "0"
-            stopOnStyle = "0">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
-                  <ActionContent
-                     consoleCommand = "po $arg1">
-                  </ActionContent>
-               </BreakpointActionProxy>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
-                  <ActionContent
-                     consoleCommand = "bt">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
+            filePath = "Restaurant-Demo/Flow/RestaurantFilter/RestaurantFilterViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "onApplyItemPressed(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4A7FDBB3-2BEE-4040-903A-2D9998511717"
-            shouldBeEnabled = "No"
+            uuid = "17B07936-58B4-4DF1-829F-FB14E20C364F"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Restaurant-Demo/Flow/RestaurantList/RestaurantListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "298"
-            endingLineNumber = "298"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
             landmarkName = "RestaurantListViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -48,123 +39,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "349298CC-5826-4C3B-B15B-79F4AEC3884E"
-            shouldBeEnabled = "No"
+            uuid = "A34B2486-6E4E-415B-90F0-889325C411CD"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Restaurant-Demo/Flow/RestaurantList/RestaurantListViewController.swift"
+            filePath = "Restaurant-Demo/Flow/RestaurantFilter/RestaurantFilterPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "303"
-            endingLineNumber = "303"
-            landmarkName = "doPresent(_:animated:completion:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "onApplyPressed(price:openAt:sortingRuleIndex:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9D816BFA-5220-4650-B0DD-B3E29858B284"
+            uuid = "9E283BCA-3083-49B2-8A58-9E04484DF6F7"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Restaurant-Demo/Flow/RestaurantList/RestaurantListViewController.swift"
+            filePath = "Restaurant-Demo/Flow/RestaurantList/RestaurantListPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "309"
-            endingLineNumber = "309"
-            landmarkName = "doPerformSegue(withIdentifier:sender:)"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "onViewDidAppear()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6520B551-64DC-4C94-85D4-5B2F67123CA0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Restaurant-Demo/Flow/RestaurantDetail/RestaurantDetailViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E4ADE516-F495-4D6E-9DB8-267A470F5FE9"
-            shouldBeEnabled = "No"
+            uuid = "9C3AE55A-E017-46AA-80A8-6C6995C647FE"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Restaurant-Demo/Flow/RestaurantList/RestaurantListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "RestaurantListViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D25059A7-2196-434B-9F47-B0423CC862D2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Restaurant-Demo/Flow/RestaurantList/RestaurantListViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
-            landmarkName = "RestaurantListViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4F5F44AE-F66F-4640-A7DA-239C96D419FA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Restaurant-Demo/Flow/RestaurantList/RestaurantListViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.RuntimeIssueBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BA3B7A6B-A6C4-4D38-BD62-69A26320DBE3"
-            shouldBeEnabled = "Yes"
+            uuid = "9CF09762-0524-4666-8C09-E4A5D0E95DFC"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            breakpointStackSelectionBehavior = "1"
-            type = "2">
+            filePath = "Restaurant-Demo/Flow/RestaurantList/RestaurantListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "updateSearchResults(for:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4D5242C7-D487-4287-9F65-EC50E7570462"
+            uuid = "846E0F54-3DB6-4A9E-89B2-683842D0C15C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Restaurant-Demo/Flow/RestaurantDetail/RestaurantDetailViewController.swift"
+            filePath = "Restaurant-Demo/Flow/RestaurantList/RestaurantListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "initView()"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "updateSearchResults(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
