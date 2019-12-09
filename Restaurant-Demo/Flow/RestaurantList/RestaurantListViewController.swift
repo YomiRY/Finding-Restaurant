@@ -26,6 +26,7 @@ class RestaurantListViewController: UITableViewController, RestaurantListViewPro
     private var mRestaurantSummaryInfos: [YelpRestaruantSummaryInfo]?
     private var mShortcutItemAction:QuickAction?
     var mFilterConfig:FilterConfigs?
+    private var mCurSearchText = ""
     private var mIsViewAppear = false
     private var mIsFirstDisp = true
     
@@ -136,11 +137,17 @@ class RestaurantListViewController: UITableViewController, RestaurantListViewPro
     @objc func refreshListToDefaultConfigs(_ sender: Any) {
         // Use the taipei station as default location
         self.mPresenter?.onEndRefreshToDefaultConfigs()
+        self.mCurSearchText = ""
     }
     
     // MARK:- UISearchResultsUpdating
     func updateSearchResults(for searchController: UISearchController) {
-        self.mPresenter?.onSearchKeyworkChange(keyword: searchController.searchBar.text)
+        // Avoid continue update searching result when click list item
+        guard self.mCurSearchText != searchController.searchBar.text else {
+            return
+        }
+        self.mCurSearchText = searchController.searchBar.text ?? ""
+        self.mPresenter?.onSearchKeyworkChange(keyword: self.mCurSearchText)
     }
     
     // MARK:- TablViewDataSource
@@ -175,7 +182,7 @@ class RestaurantListViewController: UITableViewController, RestaurantListViewPro
     // MARK: - Table view data delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // TODO: It's workaround to avoid the crash when searchcontroller is activie and go back from detail page
-        self.mScNameSearchController?.isActive = false
+//        self.mScNameSearchController?.isActive = false
         
         self.mPresenter?.onRestaurantListItemSelect(summaryInfo: self.mRestaurantSummaryInfos?[indexPath.row])
     }
