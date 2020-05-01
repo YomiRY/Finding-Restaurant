@@ -176,10 +176,11 @@ class RestaurantDetailViewController: UITableViewController, RestaurantDetailVie
         
         // Add open hour informations
         var prevView:OpenHourRowView? = nil
-        if let hoursInfo:YelpRestaurantHoursInfo? = detailInfo?.hours?[0] {
+        if let hoursInfo:YelpRestaurantHoursInfo = detailInfo?.hours?[0],
+            let openHourAry = hoursInfo.open {
             for i in 0..<7 {
                 var businessTime:YelpResaruantBusinessTime? = nil
-                for hourInfo in (hoursInfo?.open)! {
+                for hourInfo in openHourAry {
                     if hourInfo.day == i {
                         businessTime = hourInfo
                         break;
