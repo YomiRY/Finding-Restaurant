@@ -653,8 +653,9 @@ open class Floaty: UIView {
         if let superview = superview {
             if let tableView = superview as? UITableView
                 ,tableView.visibleCells.count > 0
-                , let lastVisibleCell:UITableViewCell =  tableView.visibleCells[tableView.visibleCells.count - 1]
+                ,let lastVisibleCell:UITableViewCell =  tableView.visibleCells[tableView.visibleCells.count - 1] as? UITableViewCell
                 , lastVisibleCell.frame.origin.y > superview.bounds.height {
+                
                 overlayView.frame = CGRect(
                     x: 0,y: 0,
                     width: superview.bounds.width,
